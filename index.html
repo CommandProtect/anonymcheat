@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BotunuzISMI Bot</title>
+    <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/1348019886147899556/1350852147662684161/Anon_2-photoaidcom-cropped.png?ex=67d83e99&is=67d6ed19&hm=b6272bc1b510df58eb40a917c805b6bee2de404b1a6b1df10e9458080ed4db85&format=webp&quality=lossless" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <!-- navbar Başlangıç -->
+    <header>
+        <h1 class="logo">Anonym</h1>
+        <a href="https://discord.gg/Eab5gvEvVp" class="btn-area">Topluluk Sunucumuz</a>
+    </header>
+    <!-- navbar Bitiş -->
+    <!-- home Başlangıç -->
+    <div class="wrapper">
+        <div class="home" id="home">
+            <div class="home-text">
+                <h1 id="botname">AnonymCheat</h1>
+                <h3 style="margin-left: 0;">Diğer Ekiplerden Farkımız Ne?</h3>
+                <p class="bot-description">
+                  İnsanlara yeni türlü konular öğretiyoruz
+                  Hemen Başvur:
+                </p>
+                <a href="" class="btn-area">Başvur</a>
+            </div> 
+            <div class="home-img">
+                <img src="https://cdn.discordapp.com/attachments/1348019886147899556/1350852147662684161/Anon_2-photoaidcom-cropped.png?ex=67d83e99&is=67d6ed19&hm=b6272bc1b510df58eb40a917c805b6bee2de404b1a6b1df10e9458080ed4db85&format=webp&quality=lossless"
+                    alt="">
+            </div>
+        </div>
+    </div>
+    <!-- home Bitiş -->
+    <!-- Temelden komutlar -->
+    <div class="wrapper reveal">
+        <div class="title">
+            <div class="th1">
+                <h1> </h1>
+            </div>
+            <div class="th1">
+                <h1> </h1>
+            </div>
+            <center>
+                <div class="thr">
+                    <hr>
+                </div>
+            </center>
+        </div>
+        <!-- Komutlar Katagorisi -->
+        <nav>
+            <div class="categorys">
+                <span class="category" data-name="Yetkili Ekibimiz">Yetkili Ekibimiz</span>
+                <span class="category" data-name="Kadromuz">Kadromuz</span>
+                <span class="category" data-name="SSS">SSS</span>
+                <span class="category" data-name="Forum">Forum</span>
+            </div>
+        </nav>
+
+        <!-- Buradan Aşağısı Komutlar -->
+        <div class="commands">
+            <!-- Komut Başlangıç -->
+            <div class="command hide" data-name="Yetkili Ekibimiz">
+                <h2> </h2><span>
+                    <div class="cmdinfo">
+                        <p>⭐ Armando ⭐</p>
+                    </div>
+                    <div class="cmdali">
+                        <p>Yönetim Ekibi</p>
+                    </div>
+                </span>
+            </div>
+            <!-- Komut Bitiş -->
+            <!-- Komut Başlangıç -->
+            <div class="command hide" data-name="Kadromuz">
+                <h2>Moderasyon 2</h2><span>
+                    <div class="cmdinfo">
+                        <p>Komut: /Moderasyon2</p>
+                    </div>
+                    <div class="cmdali">
+                        <p>Komut Bilgi: Moderasyon 2 Bilgileri</p>
+                    </div>
+                </span>
+            </div>
+            <!-- Komut Bitiş -->
+            <!-- Komut Başlangıç -->
+            <div class="command hide" data-name="SSS">
+                <h2>Eğlence 1</h2><span>
+                    <div class="cmdinfo">
+                        <p> </p>
+                    </div>
+                </span>
+            </div>
+            <!-- Komut Bitiş -->
+            <!-- Komut Başlangıç -->
+            <div class="command hide" data-name="Forum">
+                <h2> </h2><span>
+                    <div class="cmdinfo">
+                       <p>Crystalxz</p>
+                    </div>
+                    <div class="cmdali">
+                        <p>Moderatör</p>
+                    </div>
+                </span>
+            </div>
+            <!-- Komut Bitiş -->
+        </div>
+    </div>
+    <!-- Temelden komutlar bitiş -->
+    <script src="mzr.js"></script>
+    <script src="commands.js"></script>
+    <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
+
+    <script>
+        // İlk başta tüm komutları gizle
+        document.querySelectorAll('.command').forEach(item => {
+            item.classList.add('hide');
+        });
+
+        // Kategorilere tıklanınca komutları göster
+        document.querySelectorAll('.category').forEach(item => {
+            item.addEventListener('click', function() {
+                const categoryName = item.getAttribute('data-name');
+                const commandElements = document.querySelectorAll('.command');
+
+                commandElements.forEach(command => {
+                    if (command.getAttribute('data-name') === categoryName) {
+                        command.classList.toggle('hide'); // 'hide' sınıfını toggle eder, görünür yapar.
+                    } else {
+                        command.classList.add('hide'); // Diğerlerini gizler
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
